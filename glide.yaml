@@ -3,24 +3,19 @@ ignore:
 - bytes
 import:
 - package: github.com/golang/glog
-- package: github.com/golang/protobuf
-  subpackages:
-  - proto
 - package: golang.org/x/net
   subpackages:
   - context
 - package: google.golang.org/grpc
-- package: k8s.io/apimachinery
-  subpackages:
-  - pkg/apis/meta/v1
-- package: k8s.io/client-go
-  subpackages:
-  - kubernetes
-  - rest
 - package: k8s.io/kubernetes
   subpackages:
   - pkg/kubelet/apis/deviceplugin/v1beta1
-- package: github.com/containernetworking/cni
-  version: v0.6.0
+  - pkg/kubelet/apis/pluginregistration/v1
+- package: github.com/jaypipes/ghw
+  version: ^0.3.0
+- package: github.com/vishvananda/netlink
+testImport:
+- package: github.com/onsi/ginkgo
   subpackages:
-  - pkg/skel
+  - extensions/table
+- package: github.com/onsi/gomega
